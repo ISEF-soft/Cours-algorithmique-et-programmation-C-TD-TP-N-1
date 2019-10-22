@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+
+int main ( int argc, char** argv )
+{
+    int nombreMystere = 0, nombreEntre = 0, compteur = 0, resultat = 0;
+    const int MAX = 100, MIN = 1;
+
+    // Génération du nombre aléatoire
+
+    srand(time(NULL));
+    nombreMystere = (rand() % (MAX - MIN + 1)) + MIN;
+
+    /* La boucle du programme. Elle se répète tant que l'utilisateur n'a pas trouvé le nombre mystère */
+
+    do
+    {
+        // On demande le nombre
+        printf("Quel est le nombre ? ");
+        scanf("%d", &nombreEntre);
+        compteur ++;
+        // On compare le nombre entré avec le nombre mystère
+
+        if (nombreMystere > nombreEntre)
+            printf("C'est plus ! %d compteur \n\n");
+        else if(nombreMystere < nombreEntre)
+            printf("C'est moins  vauts ! %d compeur \n\n");
+        else
+            printf ("Bravo, vous avez trouve le nombre mystere +%d compeur !!!\n\n");
+
+    } while (nombreEntre !=nombreMystere);
+          printf("Voulez vous recommencer ?? %d compteur");
+
+      printf("voulez vous recommencer ? ");
+      printf ("Voulez vous recommencer ? \n\n");
+
+       return 0;
+}
