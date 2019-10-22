@@ -1,0 +1,21 @@
+réel a, b, c Delta
+écrire "Résolution de ax2 + bx + c = 0"
+écrire "Introduisez le coefficient de x2:"
+lire a
+écrire "Introduisez le coefficient de x:"
+lire b
+écrire "Introduisez le terme indépendant:"
+lire c
+si a=0 alors écrire "Equation du premier degré."
+sinon Delta <-- b*b-4a*c
+      si Delta>0 alors écrire "2 racines réelles distinctes:"
+                       écrire "x1=",(-b+Delta)/(2*a)
+                       écrire "x2=",(-b-Delta)/(2*a)
+      sinon si Delta=0 alors écrire "2 racines réelles égales:"
+                             écrire "x1=x2=",-b/(2*a)
+            sinon écrire "2 racines complexes conjuguées:"
+                  écrire "x1=",-b/(2*a)," + i",-Delta/(2*a)
+                  écrire "x2=",-b/(2*a)," - i",-Delta/(2*a)
+            fsi
+      fsi
+fsi
